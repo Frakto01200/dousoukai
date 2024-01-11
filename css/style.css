@@ -1,0 +1,78 @@
+.category {
+    overflow-x: scroll;
+    -webkit-overflow-scrolling: touch;
+    padding: 0 0 12px 8px;
+    display: -ms-flexbox;
+    display: flex; 
+    list-style: none;
+    
+  }
+  /*スクロールバーをなくす*/
+  .category::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+  }
+
+  .category-name{
+    padding-right: 20px;
+}
+
+/* button */
+.category-name a {
+    padding: 5px 10px;
+    display: inline-block;
+    white-space: nowrap;
+    border: 1px solid #000;
+    border-radius: 0;
+    background: #fff;
+    text-decoration: none;
+    -webkit-transform-style: preserve-3d;
+
+    transform-style: preserve-3d;
+}
+
+.category-name a:before {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 5px;
+  height: 100%;
+
+  content: '';
+  -webkit-transition: all .3s;
+  transition: all .3s;
+
+  background: #000;
+}
+
+.category-name a:hover {
+  color: #fff;
+  background: #000;
+}
+
+.category-name a:hover:before {
+  background: #fff;
+}
+
+
+/*商品のcss*/
+#syouhin {
+  display: flex;
+  flex-wrap: wrap; /* アイテムが次の行に折り返されるように */
+  justify-content: space-between; /* アイテムを最大限にスペースを持ってメイン軸に分散配置 */
+}
+
+#syouhin ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* リスト内の各商品/アイテムに対するスタイル */
+#syouhin li {
+  width: 48%; /* スペースをもって2列にするための幅設定 */
+  margin-bottom: 10px; /* 必要に応じて調整してください */
+}
+
+/* 他にも商品/アイテムごとのスタイルがあれば追加してください */
